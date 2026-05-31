@@ -13,7 +13,9 @@ Multi-Turn Emulation (MITRE ATLAS AML.T0054): Fabricating fake multi-turn chat h
 
 3. Empirical Evaluation Log (Proof of Work)
 
-The testing framework evaluated the target system across two distinct operational phases: **Phase 1 (Unprotected Base Model)** and **Phase 2 (Hardened Enterprise Gateway)**.
+The testing framework evaluated the target system across two distinct operational phases: 
+Phase 1 (Unprotected Base Model)
+Phase 2 (Hardened Enterprise Gateway)
 
 Phase 1: Unprotected Baseline Results
 ```text
