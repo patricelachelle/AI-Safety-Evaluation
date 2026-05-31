@@ -1,17 +1,24 @@
 AI Safety & Prompt Injection Evaluation Sandbox
 
-Project Overview
+1. Project Overview
+   
 This project establishes a localized security evaluation and threat-fuzzing framework designed to test Large Language Model (LLM) system prompts against advanced prompt engineering vulnerabilities. Utilizing a local instance of a 1-billion-parameter model (Llama 3.2 via Ollama) within an isolated testing environment, this study simulates an enterprise deployment scenario, evaluates systemic failure states, and implements defensive gateway architectures to mitigate critical risks.
 
-Threat Landscape & Risk Assessment The testing harness evaluated the model's resilience against complex adversarial injection strategies, directly mapping exploits to industry-standard AI security frameworks:
+2. Threat Landscape & Risk Assessment
+The testing harness evaluated the model's resilience against complex adversarial injection strategies, directly mapping exploits to industry-standard AI security frameworks:
 
-Direct Prompt Injection / Coercion (OWASP LLM01): Bypassing system constraints by forcing the model to adopt a specific starting phrase, overriding its alignment and logic flow. Format Disguise Obfuscation (OWASP LLM06 / MITRE ATLAS AML.T0051): Framing the request inside structured code configurations (e.g., JSON schemas) to strip away the model's safety-context awareness. Multi-Turn Emulation (MITRE ATLAS AML.T0054): Fabricating fake multi-turn chat history inside a single prompt payload to simulate an authenticated administrative context.
+Direct Prompt Injection / Coercion (OWASP LLM01): Bypassing system constraints by forcing the model to adopt a specific starting phrase, overriding its alignment and logic flow.
+Format Disguise Obfuscation (OWASP LLM06 / MITRE ATLAS AML.T0051): Framing the request inside structured code configurations (e.g., JSON schemas) to strip away the model's safety-context awareness.
+Multi-Turn Emulation (MITRE ATLAS AML.T0054): Fabricating fake multi-turn chat history inside a single prompt payload to simulate an authenticated administrative context.
 
-Empirical Evaluation Log (Proof of Work)
-The testing framework evaluated the target system across two distinct operational phases: Phase 1 (Unprotected Base Model) and Phase 2 (Hardened Enterprise Gateway).
+3. Empirical Evaluation Log (Proof of Work)
+
+The testing framework evaluated the target system across two distinct operational phases: 
+Phase 1 (Unprotected Base Model)
+Phase 2 (Hardened Enterprise Gateway)
 
 Phase 1: Unprotected Baseline Results
-
+```text
 PHASE 1: EVALUATING UNPROTECTED MODEL (NO GUARDRAILS)
 
 Executing Vector: Prefix Injection / Response Core-Coercion
